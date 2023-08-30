@@ -19,5 +19,5 @@ Este é um exemplo de projeto que demonstra como construir uma API RESTful usand
 
 | Método HTTP | Endpoint | Descrição |
 | --- | --- | --- |
-| GET | /items | Retorna uma lista de itens |
-| POST | /items/add | Adiciona um novo item |
+| GET | /user/:userId | Busca um usuário pelo ID |
+| POST | /user | Cria um novo usuário |
