@@ -10,5 +10,5 @@ import (
 func UserRoute(router *gin.Engine) {
 	//All routes related to users comes here
 	router.POST("/user", controllers.CreateUser()) // cria um usuario
-	router.GET("/user", controllers.GetAUser())    // pega um usuario
+	router.GET("/user/:userId", controllers.GetAUser())    // pega um usuario
 }

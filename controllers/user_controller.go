@@ -20,10 +20,10 @@ var userCollection *mongo.Collection = configs.GetCollection(configs.DB, "users"
 var validate = validator.New()
 
 // Criar um usuario
+// c é uma variavel recorrente do gin
+// ctx = context
 func CreateUser() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		// c é uma variavel recorrente do gin
-		// ctx = context
 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 		var user models.User
 		defer cancel()
@@ -57,7 +57,7 @@ func CreateUser() gin.HandlerFunc {
 	}
 }
 
-// get a user
+// get a user by id
 func GetAUser() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
